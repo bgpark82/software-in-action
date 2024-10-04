@@ -1,4 +1,6 @@
 # Standalone
+https://airflow.apache.org/docs/apache-airflow/stable/start.html
+
 ## 1. Set Airflow Home
 ```shell
 export AIRFLOW_HOME=~/airflow
