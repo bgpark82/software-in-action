@@ -187,7 +187,7 @@ services:
 
   airflow-init:
     <<: *airflow-common
-    entrypoint: /bin/bash
+    entrypoint: /bin/bash # when container start, this command is executed
     # yamllint disable rule:line-length
     command:
       - -c

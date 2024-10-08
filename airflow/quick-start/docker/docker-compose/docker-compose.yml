@@ -1,0 +1,45 @@
+version: '3'
+
+# https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html#setting-the-right-airflow-user
+services:
+  db:
+    # https://www.docker.com/blog/how-to-use-the-postgres-docker-official-image/
+    # https://medium.com/@jewelski/quickly-set-up-a-local-postgres-database-using-docker-5098052a4726
+    # https://www.youtube.com/watch?v=p2PH_YPCsis&ab_channel=TechWorldwithNana
+    image: postgres:13
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    volumes:
+      - postgres_db_volume:/var/lib/postgresql/data
+
+  redis:
+    image: redis:6-alpine
+
+  airflow-webserver:
+    build: .
+    environment:
+      AIRFLOW__CORE__EXECUTOR: CeleryExecutor # specify the executor (CeleryExecutor: distributed executor run tasks in parallel on multiple nodes
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@db/airflow # database connection that airflow will use
+      AIRFLOW__CELERY__RESULT_BACKEND: db+postgresql://airflow:airflow@db/airflow # backend where Celery will store task result
+      AIRFLOW__CELERY__BROKER_URL: redis://redis:6379/0 # message broker URL used by celery. celery pass the tasks to workers
+      AIRFLOW__CORE__FERNET_KEY: "YOUR_FERNET_KEY" # Fernet key used to encrypt and decrypt sensitive data in airflow
+      AIRFLOW__WEBSERVER__SECRET_KEY: "YOUR_SECRET_KEY" # secret key used for encrypting and signing sessions in the airflow web server
+    depends_on:
+      - db
+      - redis
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+    command:
+      - "scheduler"
+
+  init:
+    entrypoint: /bin/bash
+    command:
+      - "airflow init db"
+
+volumes:
+  postgres_db_volume:
