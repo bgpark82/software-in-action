@@ -1,12 +1,45 @@
 package com.bgpark
 
 /**
+ * Class
+ * - set of attributes (fields, properties, data) and method
+ * - represent entity
+ *
+ * Abstraction
+ * - how they interact each other
+ * - make thing simple
+ * - when drive car, we don't need to know how it works internally
+ *
+ * Encapsulation
+ * - safety
+ * - we secure the internal organs in the car
+ * - public : access to anyone
+ * - private : access to only in class
+ * - protected : accessible in class and inheritor
+ * - internal : access in module
+ *
+ * Inheritance
+ * - Inherit the property or method of base class
+ *
+ * Polymorphism
+ * - working with object through interface without knowing specific type
+ * - Inheritors can override and change the ancestral behavior
+ * - object can be used throught parents interface
+ * - Liskov Substitution Principal : child class should be substitude it's parent class
+ *
  * constructor(): primary constructor
  * - getter 제공
  * - setter 미제공
  * - 기본적으로 class는 public
  */
-class Person constructor(firstName: String) {
+class Person
+/**
+ * Primary constructor
+ * - constructor can be chained
+ * - Order : primary constructor -> Init -> Secondary Constructor
+ * - take as many as paramter as possbile and do validation at init block
+ */
+constructor(firstName: String) {
     val firstName: String = firstName
 
     /**
@@ -85,8 +118,8 @@ class PersonV3 (
 }
 
 fun main() {
-//    val person = Person(firstName = "Peter", lastName = "Park", age=10)
-//    println(person.firstName)
+    val person = Person(firstName = "Peter", lastName = "Park", age=10)
+    println(person.firstName)
     /**
      * secondary block이 호출되지 않는다
      */
@@ -97,12 +130,12 @@ fun main() {
      */
     // val personV2 = PersonV1()
 
-    val personV3 = PersonV3()
-    personV3.firstName
-    personV3.lastName
-    personV3.nickName = "Shades"
-    personV3.nickName = "New Nickname"
-    println(personV3.nickName)
-    personV3.printInfo()
+//    val personV3 = PersonV3()
+//    personV3.firstName
+//    personV3.lastName
+//    personV3.nickName = "Shades"
+//    personV3.nickName = "New Nickname"
+//    println(personV3.nickName)
+//    personV3.printInfo()
 
 }

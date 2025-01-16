@@ -1,1 +1,104 @@
 .idea
+# Compiled class files
+*.class
+
+# Log files
+*.log
+*.out
+*.err
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+.gradle/cache/
+.gradle/cache/**/*
+
+# Kotlin/Java IDEs
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+bin/
+
+# Kotlin-specific
+*.kotlin_metadata
+*.kotlin_module
+
+# Spring Boot
+*.jar
+*.war
+*.ear
+
+# Temporary Files
+*.tmp
+*.swp
+*.swo
+*.bak
+
+# Generated Files
+*.generated
+*.backup
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Environment Variables
+.env
+.env.*
+
+# Test Reports
+test-output/
+surefire-reports/
+cucumber-reports/
+
+# Coverage Reports
+.coverage/
+.coverage.raw
+*.lcov
+coverage-final.json
+
+# Dependency Libraries
+*.classpath
+*.project
+*.settings/
+.mvn/
+
+# Build System Temporary Files
+.cache/
+# IntelliJ artifacts
+artifacts/
+# Eclipse Specific
+.classpath
+.project
+.settings/
+
+# Static Analysis Tools
+checkstyle-result.xml
+pmd.xml
+target/checkstyle/
+
+# Spring Boot Devtools (LiveReload and auto-restart)
+.spring-boot-devtools.properties
+
+# Node.js (for front-end projects with Spring Boot)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Docker
+*.pid
+*.seed
+*.conf
+.dockerignore
+*.swp

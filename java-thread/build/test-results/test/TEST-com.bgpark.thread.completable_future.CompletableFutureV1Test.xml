@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bgpark.thread.completable_future.CompletableFutureV1Test" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-11-11T21:51:42" hostname="Byeonggilui-MacBookPro-2.local" time="0.011">
-  <properties/>
-  <testcase name="get()" classname="com.bgpark.thread.completable_future.CompletableFutureV1Test" time="0.011"/>
-  <system-out><![CDATA[Hello, World!
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

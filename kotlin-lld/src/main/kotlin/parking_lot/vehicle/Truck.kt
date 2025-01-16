@@ -1,6 +1,6 @@
-package com.bgpark.parking_lot
+package com.bgpark.parking_lot.vehicle
 
 class Truck(
-    override val id: String
-): Vehicle(id) {
+    override val licensePlate: String
+): Vehicle(licensePlate, VehicleType.TRUCK) {
 }

@@ -1,2 +1,5 @@
-package com.bgpark.optional;public class OptionalV1 {
+package com.bgpark.optional;
+
+public class OptionalV1 {
+
 }

@@ -1,2 +1,6 @@
-package com.bgpark.config.Strategy;public interface DeliveryStrategy {
+package com.bgpark.config.strategy;
+
+public interface DeliveryStrategy {
+
+    void deliver(String order);
 }
