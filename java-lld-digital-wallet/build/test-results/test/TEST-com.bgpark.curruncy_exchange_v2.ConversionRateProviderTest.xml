@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.bgpark.curruncy_exchange_v2.ConversionRateProviderTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-11-11T23:21:10" hostname="Byeonggilui-MacBookPro-2.local" time="0.082">
+  <properties/>
+  <testcase name="update_v2()" classname="com.bgpark.curruncy_exchange_v2.ConversionRateProviderTest" time="0.082"/>
+  <system-out><![CDATA[999.00
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

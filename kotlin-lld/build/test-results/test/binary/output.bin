@@ -1,0 +1,6 @@
+LRetrieve from cache : com.bgpark.parking_lot.ParkingAPI$CacheValue@46cdf8bd
+LRetrieve from cache : com.bgpark.parking_lot.ParkingAPI$CacheValue@58cbafc2
+,Exception 발생 : 0, 현재 딜레이: 500
+-Exception 발생 : 1, 현재 딜레이: 1000
+-Exception 발생 : 2, 현재 딜레이: 2000
+*최대 retry 횟수 초과, 종료 중...
