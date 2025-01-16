@@ -10,6 +10,9 @@ import java.util.List;
 import java.util.Random;
 import java.util.stream.*;
 
+/**
+ * https://www.baeldung.com/java-8-streams
+ */
 public class StreamTest {
 
     @Nested
