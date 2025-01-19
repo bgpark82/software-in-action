@@ -1,0 +1,1 @@
+ALTER TABLE assignment RENAME COLUMN id TO assignment_id;

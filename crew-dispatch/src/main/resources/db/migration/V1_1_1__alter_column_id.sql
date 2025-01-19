@@ -1,0 +1,1 @@
+ALTER TABLE crew RENAME COLUMN id TO crew_id;
